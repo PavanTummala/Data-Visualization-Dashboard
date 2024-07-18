@@ -56,16 +56,6 @@ pavan_viewer/                    #directory in cluster where all my files are lo
 
 The project uses Miniconda to manage the virtual environment. Below are the steps to set up and activate the environment.
 
-### 1. Activate the Virtual Environment
-
-Navigate to the directory where to pavan_viewer where script files are located and run the following commands:
-
-```bash
-conda activate pavan_viewer  //my virtual environment name is pavan_viewer
-```
-
-## How to Run the Application
-
 1. **Navigate to the Project Directory**:
    ```bash
    cd pavan_viewer/response_viewer                                             // on cluster

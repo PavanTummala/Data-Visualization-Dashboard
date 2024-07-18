@@ -88,6 +88,7 @@ This file contains the MySQL connections to the database. If there are any issue
 This file adds authentication to the website. The default username and password are:
 - Username: `admin`
 - Password: `admin`
+You can always change it by simply changing username and password in the authenticator.py file in that directory.
 
 ## File Description of Genie 
 

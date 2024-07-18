@@ -202,9 +202,7 @@ def gene_input_single(gene, group_names,data_file,log_scale=None):
         stat_data = df
        
         stat_data.columns = ['sample', 'FPKM']
-        #stat_data=pd.to_numeric(stat_data['FPKM'], errors='coerce').fillna(0.0)
-        #stat_data['FPKM'] = stat_data['FPKM'].astype(float)
-        #st.write(stat_data['FPKM'].dtype)
+  
         
         hover_y = 'FPKM'
         
@@ -274,8 +272,7 @@ def main():
         st.error("Please select a data file.")
         return
 
-    # Load data based on the selected file
-    # Create an inspector to get the table information
+
 
     inspector = inspect(engine)
     columns = inspector.get_columns('big_summary_groups')
@@ -283,10 +280,7 @@ def main():
 
     
     
-    # global default_genes
-    # global default_groups
-    # global column_names
-    # global options
+
     if "big_summary_updated_June_2024" in Data_selected:
         res=select(big_summary_gene.c['Gene']).distinct()
         res2=select(big_summary_groups.c).distinct()
@@ -328,7 +322,7 @@ def main():
     with tab1:
         
         groups = st.multiselect("**Select Groups**", column_names, default=default_groups)
-        #groups=["BM", "Other", "MLL"]
+      
         for option in options:
             col1 = st.container()
             with col1:
@@ -345,8 +339,7 @@ def main():
         col2 = st.container()
         with col2:
             if options:
-                #df = fetch_gene_data('DPM1','CD34')
-                #st.write(df)
+                
                 
                 fig = gene_input(options,Data_selected,check)
                 st.plotly_chart(fig, use_container_width=True)
